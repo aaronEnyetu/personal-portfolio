@@ -1,3 +1,6 @@
+/* eslint-disable no-useless-escape */
+/* eslint-disable no-console */
+/* eslint-disable no-empty */
 /* eslint-disable indent */
 /* eslint-disable no-prototype-builtins */
 /* eslint-disable no-undef */
