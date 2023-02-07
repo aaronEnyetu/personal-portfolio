@@ -1,13 +1,9 @@
 /* eslint-disable indent */
 /* eslint-disable no-prototype-builtins */
 /* eslint-disable no-undef */
-/*!
-  * Bootstrap v4.4.1 (https://getbootstrap.com/)
-  * Copyright 2011-2019 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
-  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-  */
+
 (function(global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery')) :
+typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery')) :
         typeof define === 'function' && define.amd ? define(['exports', 'jquery'], factory) :
             (global = global || self, factory(global.bootstrap = {}, global.jQuery));
 }(this, (function(exports, $) { 'use strict';
@@ -7034,7 +7030,7 @@ for (var i = 0; i < props.length; i++) {
           return config;
       };
 
-      _proto._setListeners = function _setListeners() {
+_proto._setListeners = function _setListeners() {
           var _this2 = this;
 
           $(this._element).on(Event$a.CLICK_DISMISS, Selector$a.DATA_DISMISS, function() {
