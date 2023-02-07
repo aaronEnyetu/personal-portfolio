@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-undef */
 /* eslint-disable new-cap */
 /* eslint-disable no-shadow-restricted-names */
