@@ -1,3 +1,7 @@
+/* eslint-disable no-redeclare */
+/* eslint-disable no-unexpected-multiline */
+/* eslint-disable no-mixed-spaces-and-tabs */
+/* eslint-disable no-undef */
 /*!
  * 
  *   typed.js - A JavaScript Typing Animation Library
@@ -8,16 +12,16 @@
  * 
  */
 (function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
-		define([], factory);
-	else if(typeof exports === 'object')
-		exports["Typed"] = factory();
-	else
-		root["Typed"] = factory();
+    if (typeof exports === 'object' && typeof module === 'object')
+        module.exports = factory();
+    else if (typeof define === 'function' && define.amd)
+        define([], factory);
+    else if (typeof exports === 'object')
+        exports['Typed'] = factory();
+    else
+        root['Typed'] = factory();
 })(this, function() {
-return /******/ (function(modules) { // webpackBootstrap
+    return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -25,7 +29,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	function __webpack_require__(moduleId) {
 /******/
 /******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId])
+/******/ 		if (installedModules[moduleId])
 /******/ 			return installedModules[moduleId].exports;
 /******/
 /******/ 		// Create a new module (and put it into the cache)
@@ -53,7 +57,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.c = installedModules;
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = '';
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -63,19 +67,19 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+            'use strict';
 	
-	Object.defineProperty(exports, '__esModule', {
+            Object.defineProperty(exports, '__esModule', {
 	  value: true
-	});
+            });
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+            var _createClass = (function() { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function(Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+            function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	var _initializerJs = __webpack_require__(1);
+            var _initializerJs = __webpack_require__(1);
 	
-	var _htmlParserJs = __webpack_require__(3);
+            var _htmlParserJs = __webpack_require__(3);
 	
 	/**
 	 * Welcome to Typed.js!
@@ -84,7 +88,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @returns {object} a new Typed object
 	 */
 	
-	var Typed = (function () {
+            var Typed = (function() {
 	  function Typed(elementId, options) {
 	    _classCallCheck(this, Typed);
 	
@@ -188,7 +192,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.shuffleStringsIfNeeded(this);
 	      this.insertCursor();
 	      if (this.bindInputFocusEvents) this.bindFocusEvents();
-	      this.timeout = setTimeout(function () {
+	      this.timeout = setTimeout(function() {
 	        // Check if there is some text in the element, if yes start by backspacing the default message
 	        if (!_this.currentElContent || _this.currentElContent.length === 0) {
 	          _this.typewrite(_this.strings[_this.sequence[_this.arrayPos]], _this.strPos);
@@ -224,7 +228,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	
 	      // contain typing function in a timeout humanize'd delay
-	      this.timeout = setTimeout(function () {
+	      this.timeout = setTimeout(function() {
 	        // skip over any HTML chars
 	        curStrPos = _htmlParserJs.htmlParser.typeHtmlChars(curString, curStrPos, _this2);
 	
@@ -263,7 +267,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	
 	        // timeout for any pause after a character
-	        _this2.timeout = setTimeout(function () {
+	        _this2.timeout = setTimeout(function() {
 	          // Accounts for blinking while paused
 	          _this2.toggleBlinking(false);
 	
@@ -330,7 +334,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          return;
 	        }
 	      }
-	      this.timeout = setTimeout(function () {
+	      this.timeout = setTimeout(function() {
 	        _this3.backspace(curString, curStrPos);
 	      }, this.backDelay);
 	    }
@@ -355,7 +359,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      this.toggleBlinking(false);
 	      var humanize = this.humanizer(this.backSpeed);
 	
-	      this.timeout = setTimeout(function () {
+	      this.timeout = setTimeout(function() {
 	        curStrPos = _htmlParserJs.htmlParser.backSpaceHtmlChars(curString, curStrPos, _this4);
 	        // replace text with base text + typed characters
 	        var curStringAtPosition = curString.substr(0, curStrPos);
@@ -466,7 +470,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    key: 'shuffleStringsIfNeeded',
 	    value: function shuffleStringsIfNeeded() {
 	      if (!this.shuffle) return;
-	      this.sequence = this.sequence.sort(function () {
+	      this.sequence = this.sequence.sort(function() {
 	        return Math.random() - 0.5;
 	      });
 	    }
@@ -482,7 +486,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	      this.el.className += ' ' + this.fadeOutClass;
 	      if (this.cursor) this.cursor.className += ' ' + this.fadeOutClass;
-	      return setTimeout(function () {
+	      return setTimeout(function() {
 	        _this5.arrayPos++;
 	        _this5.replaceText('');
 	
@@ -529,10 +533,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var _this6 = this;
 	
 	      if (!this.isInput) return;
-	      this.el.addEventListener('focus', function (e) {
+	      this.el.addEventListener('focus', function(e) {
 	        _this6.stop();
 	      });
-	      this.el.addEventListener('blur', function (e) {
+	      this.el.addEventListener('blur', function(e) {
 	        if (_this6.el.value && _this6.el.value.length !== 0) {
 	          return;
 	        }
@@ -557,38 +561,38 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 	
 	  return Typed;
-	})();
+            })();
 	
-	exports['default'] = Typed;
-	module.exports = exports['default'];
+            exports['default'] = Typed;
+            module.exports = exports['default'];
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+            'use strict';
 	
-	Object.defineProperty(exports, '__esModule', {
+            Object.defineProperty(exports, '__esModule', {
 	  value: true
-	});
+            });
 	
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+            var _extends = Object.assign || function(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+            var _createClass = (function() { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function(Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+            function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+            function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	var _defaultsJs = __webpack_require__(2);
+            var _defaultsJs = __webpack_require__(2);
 	
-	var _defaultsJs2 = _interopRequireDefault(_defaultsJs);
+            var _defaultsJs2 = _interopRequireDefault(_defaultsJs);
 	
 	/**
 	 * Initialize the Typed object
 	 */
 	
-	var Initializer = (function () {
+            var Initializer = (function() {
 	  function Initializer() {
 	    _classCallCheck(this, Initializer);
 	  }
@@ -658,7 +662,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      self.isPaused = false;
 	
 	      // input strings of text
-	      self.strings = self.options.strings.map(function (s) {
+	      self.strings = self.options.strings.map(function(s) {
 	        return s.trim();
 	      });
 	
@@ -773,11 +777,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 	
 	  return Initializer;
-	})();
+            })();
 	
-	exports['default'] = Initializer;
-	var initializer = new Initializer();
-	exports.initializer = initializer;
+            exports['default'] = Initializer;
+            var initializer = new Initializer();
+            exports.initializer = initializer;
 
 /***/ }),
 /* 2 */
@@ -789,12 +793,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @public
 	 */
 	
-	'use strict';
+            'use strict';
 	
-	Object.defineProperty(exports, '__esModule', {
+            Object.defineProperty(exports, '__esModule', {
 	  value: true
-	});
-	var defaults = {
+            });
+            var defaults = {
 	  /**
 	   * @property {array} strings strings to be typed
 	   * @property {string} stringsElement ID of element containing string children
@@ -944,10 +948,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @param {Typed} self
 	   */
 	  onDestroy: function onDestroy(self) {}
-	};
+            };
 	
-	exports['default'] = defaults;
-	module.exports = exports['default'];
+            exports['default'] = defaults;
+            module.exports = exports['default'];
 
 /***/ }),
 /* 3 */
@@ -958,17 +962,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Parse HTML tags & HTML Characters
 	 */
 	
-	'use strict';
+            'use strict';
 	
-	Object.defineProperty(exports, '__esModule', {
+            Object.defineProperty(exports, '__esModule', {
 	  value: true
-	});
+            });
 	
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+            var _createClass = (function() { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function(Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+            function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	var HTMLParser = (function () {
+            var HTMLParser = (function() {
 	  function HTMLParser() {
 	    _classCallCheck(this, HTMLParser);
 	  }
@@ -1039,13 +1043,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }]);
 	
 	  return HTMLParser;
-	})();
+            })();
 	
-	exports['default'] = HTMLParser;
-	var htmlParser = new HTMLParser();
-	exports.htmlParser = htmlParser;
+            exports['default'] = HTMLParser;
+            var htmlParser = new HTMLParser();
+            exports.htmlParser = htmlParser;
 
 /***/ })
-/******/ ])
+/******/ ]);
 });
-;
